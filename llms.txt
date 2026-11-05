@@ -1,0 +1,23 @@
+# Quantum Noise Masking: reading guide
+
+This repository asks whether nearly hiding a prescribed quantum noise channel in two complementary marginals implies that the noise is near a channel admitting exact hiding.
+
+## Start with the task
+
+Read science/model.md for the identity baseline, pure bipartite isometry, reference-sensitive half-diamond leakage and comparison class. The observer has one share and an input reference; the noise environment is unavailable. Input-state information may remain local.
+
+## Follow a question
+
+- What channels can be hidden exactly? Read science/exact_masking.md, Theorem 1 and its support, commutant and no-masking lemmas.
+- What changes for a finite gate family? Read science/approximate_gates.md, Theorem 2: coherent power-cube averaging, common-environment continuity and opposite-share contractions.
+- Where does exact structure fail approximately? Read science/weyl_separation.md: explicit encoder, both marginal bounds, global distance 2/3, winding obstruction and distance 1/48 from every exactly maskable channel.
+- How is the encoder implemented? Read science/resources_and_stability.md for registers, gate ordering, QFT counts, finite-alphabet precision and separate channel/encoder error budgets.
+- What is the physical consequence? Read science/interpretation.md.
+- What was already known? Read references/RELATED_WORK.md and references/references.bib.
+- How are finite identities checked? Read verification/README.md and verification/verify_masking.py.
+
+## Distinctions to retain
+
+The exact class is all Schur channels in all orthonormal bases, not only random-unitary dephasing. The approximate criterion uses matrix commutators of implementing unitaries; Weyl conjugation channels themselves commute. Common enlarged environments in a proof are not discarded physical outputs of the masker. A low local noise signature is different from masking arbitrary input states or correcting the noise.
+
+The separation is uniform over dimension but uses a growing input space. Error exponents and register sizes are sufficient bounds. Global access to both shares is outside the local privacy boundary. Scientific proofs and finite numerical checks establish different statements.
