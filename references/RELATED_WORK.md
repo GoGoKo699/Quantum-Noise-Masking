@@ -5,9 +5,9 @@
 Let $`\mathcal N`$ be a channel on a finite-dimensional input space $`H`$. A deterministic pure encoder is an isometry $`V:H\to A\otimes B`$, with complementary marginal channels
 
 ```math
-\alpha=\operatorname{Tr}_B\circ\operatorname{Ad}_V,
+\alpha=\mathrm{Tr}_B\circ\mathrm{Ad}_V,
 \qquad
-\beta=\operatorname{Tr}_A\circ\operatorname{Ad}_V.
+\beta=\mathrm{Tr}_A\circ\mathrm{Ad}_V.
 ```
 
 We quantify how well either share can detect whether the prescribed channel acted before encoding by
@@ -85,6 +85,8 @@ The result separates two statements that exact theory might otherwise conflate: 
 The dimension grows as leakage decreases, and the task concerns a fixed finite family and one use. It does not establish universal state masking, optimal error exponents, privacy for arbitrary circuits, indefinite reuse, or a practical cryptographic protocol. The environment of the noise channel and its classical kick record are inaccessible to the observers, as in the ordinary channel model. The pure bipartite restriction is essential: adding private randomness or another share changes the masking problem.
 
 ## Bibliography
+
+The educational anchor is John Watrous, *The Theory of Quantum Information* (2018), available through the [author's source page](https://cs.uwaterloo.ca/~watrous/TQI/). It supplies the channel, norm, Weyl and Schur foundations used in the [learning bridge](../learning/WATROUS_BRIDGE.md). In particular, the basis-copy isometry is a standard ingredient appearing in §4.1.3, Proposition 4.17; the bridge explains its channel-masking use. The research comparisons below and the cited continuity and topological results remain separate from that educational role.
 
 1. Anna Honeycutt, Hailey Murray, and Eric Chitambar, “Quantum channel masking,” *Physical Review A* **113**, 042457 (2026). [Published article](https://doi.org/10.1103/5r9z-k5qn); [arXiv:2510.09456v2](https://arxiv.org/html/2510.09456v2).
 2. Kavan Modi, Arun K. Pati, Aditi Sen(De), and Ujjwal Sen, “Masking Quantum Information is Impossible,” *Physical Review Letters* **120**, 230501 (2018). [DOI](https://doi.org/10.1103/PhysRevLett.120.230501).

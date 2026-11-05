@@ -9,7 +9,7 @@ Use the [model and norm conventions](model.md), with $`\alpha_V=M_A`$, $`\beta_V
 Let $`W_1,W_2:H\to K\otimes E`$ be isometries and let
 
 ```math
-\Phi_i(X)=\operatorname{Tr}_E(W_iXW_i^\dagger).
+\Phi_i(X)=\mathrm{Tr}_E(W_iXW_i^\dagger).
 ```
 
 Then
@@ -65,7 +65,7 @@ and
 
 ```math
 \varepsilon_*(U_1,\ldots,U_k)
-=\inf_V\max_{1\le j\le k}\varepsilon_V(\operatorname{Ad}_{U_j}),
+=\inf_V\max_{1\le j\le k}\varepsilon_V(\mathrm{Ad}_{U_j}),
 ```
 
 where the infimum is over all finite-dimensional pure bipartite isometries. A global phase on a representative $`U_j`$ changes neither quantity.
@@ -163,11 +163,11 @@ Orthogonality of the flags implies
 \|V_LU_j-(I_A\otimes U_j)V_L\|_\infty\le r.
 ```
 
-For example, the square of the norm on any input vector is the average of the squared norms of its flagged differences, each bounded by $`r^2`$. The two isometries induce $`\alpha_{V_L}\circ\operatorname{Ad}_{U_j}`$ and $`\alpha_{V_L}`$ after tracing $`B`$. Lemma 4 gives
+For example, the square of the norm on any input vector is the average of the squared norms of its flagged differences, each bounded by $`r^2`$. The two isometries induce $`\alpha_{V_L}\circ\mathrm{Ad}_{U_j}`$ and $`\alpha_{V_L}`$ after tracing $`B`$. Lemma 4 gives
 
 ```math
 \frac12
-\|\alpha_{V_L}\circ\operatorname{Ad}_{U_j}-\alpha_{V_L}\|_\diamond
+\|\alpha_{V_L}\circ\mathrm{Ad}_{U_j}-\alpha_{V_L}\|_\diamond
 \le r.
 ```
 
@@ -175,7 +175,7 @@ For example, the square of the norm on any input vector is the average of the sq
 
 ```math
 \beta_{V_L}
-=L^{-k}\sum_{\mathbf a\in Q_L}\operatorname{Ad}_{W_{\mathbf a}}.
+=L^{-k}\sum_{\mathbf a\in Q_L}\mathrm{Ad}_{W_{\mathbf a}}.
 ```
 
 Move an input $`U_j`$ only past the factors to its right. Extending the definition of $`W_{\mathbf a}`$ to nonnegative integer coordinates gives
@@ -187,12 +187,12 @@ Move an input $`U_j`$ only past the factors to its right. Extending the definiti
 ```
 
 Lemma 4 and convexity bound the half-diamond distance from
-$`\beta_{V_L}\circ\operatorname{Ad}_{U_j}`$ to the translated-box mixture
+$`\beta_{V_L}\circ\mathrm{Ad}_{U_j}`$ to the translated-box mixture
 
 ```math
 \widetilde\beta_j
 =L^{-k}\sum_{\mathbf a\in Q_L}
-\operatorname{Ad}_{W_{\mathbf a+\mathbf e_j}}
+\mathrm{Ad}_{W_{\mathbf a+\mathbf e_j}}
 ```
 
 by $`r`$. The uniform measures on $`Q_L`$ and $`Q_L+\mathbf e_j`$ have total variation distance $`1/L`$: their intersection contains $`(L-1)L^{k-1}`$ of the $`L^k`$ labels. A random-unitary channel difference is bounded in half-diamond norm by the total variation distance of its label distributions, so
@@ -205,7 +205,7 @@ The triangle inequality proves
 
 ```math
 \frac12
-\|\beta_{V_L}\circ\operatorname{Ad}_{U_j}-\beta_{V_L}\|_\diamond
+\|\beta_{V_L}\circ\mathrm{Ad}_{U_j}-\beta_{V_L}\|_\diamond
 \le r+\frac1L.
 ```
 
@@ -219,7 +219,7 @@ Suppose an arbitrary encoder $`V`$ has leakage at most $`\varepsilon`$ for every
 t=\sqrt{2\varepsilon}.
 ```
 
-The marginal $`\beta_V\circ\operatorname{Ad}_{U_i}`$ has Stinespring isometry $`VU_i`$, with the $`A`$ share as its environment. Lemma 5 and the half-diamond convention produce a contraction $`A_i`$ on $`A`$ satisfying
+The marginal $`\beta_V\circ\mathrm{Ad}_{U_i}`$ has Stinespring isometry $`VU_i`$, with the $`A`$ share as its environment. Lemma 5 and the half-diamond convention produce a contraction $`A_i`$ on $`A`$ satisfying
 
 ```math
 \|VU_i-(A_i\otimes I_B)V\|_\infty\le t.

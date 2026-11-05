@@ -41,7 +41,7 @@ The nontrivial implication is from exact masking to a pure fixed-state basis. Th
 Let $`u,v\in A\otimes B`$ be nonzero pure vectors. If
 
 ```math
-\operatorname{Tr}_B|u\rangle\langle v|=0,
+\mathrm{Tr}_B|u\rangle\langle v|=0,
 ```
 
 then the supports of their $`B`$ marginals are orthogonal.
@@ -74,7 +74,7 @@ Suppose a channel
 has a faithful stationary state $`\sigma\gt 0`$. Then
 
 ```math
-\operatorname{Fix}(\mathcal T^\dagger)
+\mathrm{Fix}(\mathcal T^\dagger)
 =\{K_\mu,K_\mu^\dagger:\mu\}',
 ```
 
@@ -89,9 +89,9 @@ D=\mathcal T^\dagger(F^\dagger F)-F^\dagger F\succeq0.
 Stationarity implies
 
 ```math
-\operatorname{Tr}(\sigma D)
-=\operatorname{Tr}[\mathcal T(\sigma)F^\dagger F]
--\operatorname{Tr}(\sigma F^\dagger F)
+\mathrm{Tr}(\sigma D)
+=\mathrm{Tr}[\mathcal T(\sigma)F^\dagger F]
+-\mathrm{Tr}(\sigma F^\dagger F)
 =0.
 ```
 
@@ -123,14 +123,14 @@ Let $`\mathcal N`$ be any finite-dimensional channel, and define its Cesàro pro
 Let
 
 ```math
-R=\operatorname{supp}\mathcal P(I_H),
+R=\mathrm{supp}\mathcal P(I_H),
 \qquad
 T=R^\perp.
 ```
 
 Then:
 
-- $`\mathcal P`$ is CPTP and idempotent, with range $`\operatorname{Fix}(\mathcal N)`$;
+- $`\mathcal P`$ is CPTP and idempotent, with range $`\mathrm{Fix}(\mathcal N)`$;
 - every output of $`\mathcal P`$ is supported on $`R`$;
 - $`\mathcal P`$ annihilates both operator corners $`\mathcal B(T,R)`$ and $`\mathcal B(R,T)`$.
 
@@ -193,7 +193,7 @@ The restriction
 \mathcal P_R(Y)=\sum_\mu A_\mu Y A_\mu^\dagger
 ```
 
-is a CPTP projection on $`\mathcal B(R)`$ and has faithful stationary state $`\sigma_R`$. Put $`\mathcal F_R=\operatorname{Fix}(\mathcal P_R^\dagger)`$. By Lemma 2, every $`F\in\mathcal F_R`$ commutes with every $`A_\mu`$ and $`A_\mu^\dagger`$. Consequently
+is a CPTP projection on $`\mathcal B(R)`$ and has faithful stationary state $`\sigma_R`$. Put $`\mathcal F_R=\mathrm{Fix}(\mathcal P_R^\dagger)`$. By Lemma 2, every $`F\in\mathcal F_R`$ commutes with every $`A_\mu`$ and $`A_\mu^\dagger`$. Consequently
 
 ```math
 \mathcal P^\dagger(F\oplus0)
@@ -214,8 +214,8 @@ The upper-right entry, for example, is
 For $`Z=|r\rangle\langle t|`$, write $`Y=\mathcal P(Z)`$. It is supported on $`R`$ and satisfies $`\mathcal P_R(Y)=Y`$. For every $`F\in\mathcal F_R`$,
 
 ```math
-\operatorname{Tr}(F^\dagger Y)
-=\operatorname{Tr}\!\left[
+\mathrm{Tr}(F^\dagger Y)
+=\mathrm{Tr}\!\left[
 \mathcal P^\dagger(F^\dagger\oplus0)Z
 \right]=0,
 ```
@@ -225,8 +225,8 @@ because the first factor is block diagonal and $`Z`$ is an off-diagonal corner.
 The pairing between the range of a projection and the range of its adjoint is nondegenerate. Explicitly, for arbitrary $`G\in\mathcal B(R)`$,
 
 ```math
-\operatorname{Tr}(G^\dagger Y)
-=\operatorname{Tr}\!\left[
+\mathrm{Tr}(G^\dagger Y)
+=\mathrm{Tr}\!\left[
 (\mathcal P_R^\dagger G)^\dagger Y
 \right]=0,
 ```
@@ -265,7 +265,7 @@ has support orthogonal to $`\beta(|t\rangle\langle t|)`$. Invariance says these 
 ```math
 H=\bigoplus_j L_j\otimes M_j,
 \qquad
-\mathcal F:=\operatorname{Fix}(\mathcal N^\dagger)
+\mathcal F:=\mathrm{Fix}(\mathcal N^\dagger)
 =\bigoplus_j\mathcal B(L_j)\otimes I_{M_j}.
 ```
 
@@ -284,7 +284,7 @@ The maps
 are channels on $`M_j`$. Their adjoint fixed spaces are scalar:
 
 ```math
-\operatorname{Fix}(\mathcal N_j^\dagger)=\mathbb C I_{M_j}.
+\mathrm{Fix}(\mathcal N_j^\dagger)=\mathbb C I_{M_j}.
 ```
 
 To verify this, if $`\mathcal N_j^\dagger(F)=F`$, then the operator $`I_{L_j}\otimes F`$ in block $`j`$, with zero in all other blocks, is fixed by $`\mathcal N^\dagger`$. Its membership in the displayed algebra forces $`F`$ to be scalar.
@@ -292,7 +292,7 @@ To verify this, if $`\mathcal N_j^\dagger(F)=F`$, then the operator $`I_{L_j}\ot
 The fixed space of a finite-dimensional linear map has the same dimension as that of its adjoint. Each $`\mathcal N_j`$ therefore has a unique stationary state $`\tau_j`$, and its Cesàro projection is
 
 ```math
-Y\longmapsto\operatorname{Tr}(Y)\tau_j.
+Y\longmapsto\mathrm{Tr}(Y)\tau_j.
 ```
 
 For a unit vector $`a\in L_j`$ and any unit vector $`b\in M_j`$,
@@ -315,7 +315,7 @@ If $`\dim M_j\ge2`$, choose orthogonal $`b_0,b_1\in M_j`$ and put $`u=V(a\otimes
 \frac{b_0-ib_1}{\sqrt2}
 ```
 
-forces $`\operatorname{Tr}_B|u\rangle\langle v|=0`$. Lemma 1 then makes the two equal $`B`$ marginals orthogonally supported, which is impossible for unit-trace states. Thus every $`M_j`$ is one-dimensional.
+forces $`\mathrm{Tr}_B|u\rangle\langle v|=0`$. Lemma 1 then makes the two equal $`B`$ marginals orthogonally supported, which is impossible for unit-trace states. Thus every $`M_j`$ is one-dimensional.
 
 It follows that each $`K_\mu`$ is scalar on each block $`L_j`$. Choose an orthonormal basis within every $`L_j`$. All Kraus operators are diagonal in the resulting complete basis. This proves statement 3 from statement 1.
 

@@ -3,8 +3,8 @@
 This account concerns the supported bipartite isometric masking construction for the channel
 
 ```math
-\mathcal N_d=\frac13\bigl(\mathrm{id}+\operatorname{Ad}_{X_d}
-+\operatorname{Ad}_{Z_d}\bigr).
+\mathcal N_d=\frac13\bigl(\mathrm{id}+\mathrm{Ad}_{X_d}
++\mathrm{Ad}_{Z_d}\bigr).
 ```
 
 It supplies an explicit circuit, charges its registers and gate precision, and proves stability under channel and encoder errors. It does not assert an optimal leakage exponent, minimal share dimension, or a particular hardware implementation. The mathematical masking encoder remains a coherent isometry with a pure ancillary input and two retained shares.
@@ -21,21 +21,23 @@ Thus $`D_\diamond`$ ranges from zero to one. All channel errors below use this h
 
 For an encoder channel $`\mathcal E:S\to AB`$, define its leakage about the presence of $`\mathcal N`$, with identity as the fixed baseline, by
 
+**Equation (1).**
+
 ```math
 \varepsilon_{\mathcal E}(\mathcal N)
 =\max_{J=A,B}D_\diamond
-\left(\operatorname{Tr}_{J^c}\mathcal E\mathcal N,
-\operatorname{Tr}_{J^c}\mathcal E\right).
-\tag{1}
+\left(\mathrm{Tr}_{J^c}\mathcal E\mathcal N,
+\mathrm{Tr}_{J^c}\mathcal E\right).
 ```
 
 The same encoder is used under both hypotheses. The diamond norm allows an arbitrary reference correlated with the input; a reference of dimension $`d=\dim S`$ suffices. This condition hides the action of the specified channel relative to identity. It does not require the shares to hide the input state itself.
 
 Use the convenient family
 
+**Equation (2).**
+
 ```math
 m\ge1,\qquad L=2^m,\qquad d=L^2=2^{2m}.
-\tag{2}
 ```
 
 The input has $`2m`$ qubits. The encoder adds $`2m`$ clean qubits, and its two output shares each have $`2m`$ qubits. An explicit ideal circuit has the following counts in a model with arbitrary pairwise two-qubit controlled-phase gates:
@@ -52,34 +54,39 @@ The input has $`2m`$ qubits. The encoder adds $`2m`$ clean qubits, and its two o
 
 Write $`\varepsilon_m=\varepsilon_V(\mathcal N_d)`$ for the ideal leakage. It satisfies
 
+**Equation (3).**
+
 ```math
 \varepsilon_m\le
 \frac23\max\left\{2^{-m},
 \sin\left[\frac{\pi(2^m-1)}{2^{2m}}\right]\right\}
 \le\frac{2\pi}{3}\,2^{-m}.
-\tag{3}
 ```
 
 The input noise remains a constant distance from the exactly maskable class:
 
+**Equation (4).**
+
 ```math
 \inf_{\mathcal S\in\mathfrak M_d}
 D_\diamond(\mathcal N_d,\mathcal S)\ge\frac1{48}.
-\tag{4}
 ```
 
 Here $`\mathfrak M_d`$ includes Schur channels in every orthonormal basis. The project's exact classification identifies this set with channels exactly maskable against identity by a bipartite isometry. The baseline, input dimension, and two-share isometric model are part of that identification.
 
 If an actual channel and a common actual encoder satisfy
 
+**Equation (5).**
+
 ```math
 \eta=D_\diamond(\widetilde{\mathcal N},\mathcal N_d),
 \qquad
-\kappa=D_\diamond(\widetilde{\mathcal E},\operatorname{Ad}_V),
-\tag{5}
+\kappa=D_\diamond(\widetilde{\mathcal E},\mathrm{Ad}_V),
 ```
 
 then
+
+**Equation (6).**
 
 ```math
 \boxed{
@@ -90,16 +97,16 @@ then
 D_\diamond(\widetilde{\mathcal N},\mathcal S)
 \ge\left(\frac1{48}-\eta\right)_+.
 }
-\tag{6}
 ```
 
 For a coherent implemented isometry $`W`$, the encoder error obeys
+
+**Equation (7).**
 
 ```math
 \kappa\le
 \tau:=\inf_{\theta\in\mathbb R}
 \|W-e^{i\theta}V\|_\infty.
-\tag{7}
 ```
 
 The global-phase minimization is explicit because that phase has no channel meaning. Bounds stated instead with $`\|W-V\|_\infty`$ are valid without this minimization and can only be weaker.
@@ -108,9 +115,10 @@ The global-phase minimization is explicit because that phase has no channel mean
 
 The [Weyl construction](weyl_separation.md) fixes $`ZX=\omega XZ`$ with $`\omega=e^{2\pi i/d}`$ and proves the exact finite leakage bound used in (3). Its encoder is
 
+**Equation (8).**
+
 ```math
 V|\psi\rangle=\frac1L\sum_{a,b=0}^{L-1}|a,b\rangle_A\otimes X^aZ^b|\psi\rangle_B.
-\tag{8}
 ```
 
 The labels remain coherent. Orthogonality of their basis states gives $`V^\dagger V=I`$. The phase-arc estimate in the Weyl proof requires $`L-1\le d/2`$, which holds throughout the sequence (2). The proof also supplies the global distance in (17) and the all-Schur separation in (4). This page develops their implementation and perturbation consequences.
@@ -140,28 +148,31 @@ j=\sum_{s=0}^{n-1}2^s j_s.
 
 The operation $`Z^b`$ multiplies $`|b\rangle|j\rangle`$ by
 
+**Equation (12).**
+
 ```math
 \omega^{bj}
 =\prod_{\substack{0\le r\lt m,\ 0\le s\lt n\\r+s\lt n}}
 \exp\left(\frac{2\pi i\,2^{r+s}}{2^n}b_rj_s\right).
-\tag{12}
 ```
 
 Terms with $`r+s\ge n`$ are integer multiples of $`2\pi`$ and can be omitted. Thus the controlled phase is exactly the product of two-qubit gates
 
+**Equation (13).**
+
 ```math
 \mathrm{CP}(\theta_{rs})
-=\operatorname{diag}(1,1,1,e^{i\theta_{rs}}),
+=\mathrm{diag}(1,1,1,e^{i\theta_{rs}}),
 \qquad
 \theta_{rs}=\frac{2\pi}{2^{n-r-s}},
-\tag{13}
 ```
 
 between label qubit $`b_r`$ and data qubit $`B_s`$. Its gate count is
 
+**Equation (14).**
+
 ```math
 G_m=\sum_{r=0}^{m-1}(2m-r)=\frac{3m^2+m}{2}.
-\tag{14}
 ```
 
 This factorization is diagonal and exact; the gates can be applied in any order within this phase block.
@@ -176,9 +187,10 @@ F_d|j\rangle=\frac1{\sqrt d}\sum_{k=0}^{d-1}\omega^{jk}|k\rangle.
 
 Then
 
+**Equation (15).**
+
 ```math
 F_dX=ZF_d,\qquad X^a=F_d^\dagger Z^aF_d.
-\tag{15}
 ```
 
 Consequently the controlled $`X^a`$ operation is implemented by applying $`F_d`$ to B, applying the phase block (12) with label a, and applying $`F_d^\dagger`$ to B. This is the established Fourier-adder method [R1], specialized here to an m-bit addend and a $`2m`$-bit target modulo $`2^{2m}`$. The modulus is important: no overflow output or carry register is required.
@@ -199,9 +211,10 @@ In a conventional exact n-qubit QFT circuit, each transform uses n Hadamards, $`
 
 Hadamards,
 
+**Equation (16).**
+
 ```math
 2G_m+2\frac{(2m)(2m-1)}2=7m^2-m
-\tag{16}
 ```
 
 controlled phases, and $`2m`$ swaps. These are sufficient counts for the displayed circuit, not optimality statements. Bit reversal can instead be tracked by wire conventions, but that optimization is unnecessary.
@@ -220,9 +233,10 @@ A joint receiver applies $`U^\dagger`$, recovering the input to the encoder in B
 
 The global distinction has an efficient witness. Introduce a $`2m`$-qubit reference R and prepare $`|\Phi_d\rangle=d^{-1/2}\sum_j|j\rangle_R|j\rangle_B`$, using $`2m`$ Bell pairs. The three vectors $`(I\otimes I)|\Phi_d\rangle`$, $`(I\otimes X)|\Phi_d\rangle`$ and $`(I\otimes Z)|\Phi_d\rangle`$ are orthogonal, so
 
+**Equation (17).**
+
 ```math
 D_\diamond(\mathcal N_d,\mathrm{id})=\frac23.
-\tag{17}
 ```
 
 Isometric encoding preserves this distance. After joint decoding, subtract R from B modulo d and apply $`F_d^\dagger`$ to R. Indeed,
@@ -240,32 +254,35 @@ The encoder by itself has $`4m`$ qubits. This optional reference-assisted global
 
 The exact gate count above uses dyadic controlled phases as available gates. Those gates have finite mathematical descriptions, but most are not exactly realizable by a fixed Clifford+T alphabet. The finite-alphabet implementation therefore uses approximation with a declared error budget.
 
-For $`P(\varphi)=\operatorname{diag}(1,e^{i\varphi})`$,
+For $`P(\varphi)=\mathrm{diag}(1,e^{i\varphi})`$,
+
+**Equation (18).**
 
 ```math
 \mathrm{CP}(\theta)
 =\bigl(P(\theta/2)\otimes P(\theta/2)\bigr)
 \mathrm{CNOT}\bigl(I\otimes P(-\theta/2)\bigr)\mathrm{CNOT}.
-\tag{18}
 ```
 
 This identity follows on a basis state with bits c,t from
 $`(c+t-(c\mathbin{\oplus}t))\theta/2=ct\theta`$.
 Each controlled phase therefore costs two CNOTs and three single-qubit phase rotations. Replacing every swap by three CNOTs gives sufficient counts of
 
+**Equation (19).**
+
 ```math
 14m^2+4m\quad\text{CNOTs},\qquad
 3(7m^2-m)\quad\text{single-qubit phase rotations},
-\tag{19}
 ```
 
 in addition to the $`6m`$ Hadamards. No extra qubits are introduced.
 
 Let $`C_m=7m^2-m`$. If the rotations in (18) are each approximated, up to an overall single-qubit phase, within operator norm $`\zeta`$, the complete unitary circuit is within $`3C_m\zeta`$ of U up to one overall circuit phase. This is the telescoping product inequality for unitary matrices. Restricting the ancillary input to $`|0\rangle_A`$ gives
 
+**Equation (20).**
+
 ```math
 \inf_\theta\|W-e^{i\theta}V\|_\infty\le3C_m\zeta.
-\tag{20}
 ```
 
 Consequently, choosing $`\zeta=\tau/(3C_m)`$ ensures encoder half-diamond error at most $`\tau`$. Global phases used to compare single-qubit matrices combine into a single irrelevant circuit phase; no conditional relative phase is discarded.
@@ -273,9 +290,10 @@ Consequently, choosing $`\zeta=\tau/(3C_m)`$ ensures encoder half-diamond error 
 The Solovay–Kitaev construction supplies an ancilla-free compilation of each single-qubit rotation into a fixed finite inverse-closed universal gate alphabet with length
 $`O(\log^c(1/\zeta))`$ for a universal constant c; the standard Dawson–Nielsen account gives an exponent about 3.97 [R2]. Thus a sufficient total length is
 
+**Equation (21).**
+
 ```math
 O\!\left(m^2\log^c\frac{m^2}{\tau}\right),
-\tag{21}
 ```
 
 with the same $`4m`$ qubits. This is deliberately a conservative compilation bound. It is not an optimal T-count claim.
@@ -284,11 +302,12 @@ Taking $`\tau=2^{-m}`$ keeps the compiled encoder size polynomial in m while ret
 
 In a model of imperfect gate channels, a separate telescoping inequality gives
 
+**Equation (22).**
+
 ```math
 D_\diamond(\widetilde U_g\cdots\widetilde U_1,
 U_g\cdots U_1)
 \le\sum_{\ell=1}^g D_\diamond(\widetilde U_\ell,U_\ell).
-\tag{22}
 ```
 
 This is an error budget, not a hardware noise threshold. A desired total encoder error $`\kappa`$ must be met by the synthesized or fault-tolerant logical gates, including state preparation if it is imperfect.
@@ -308,7 +327,9 @@ The trace norm is bounded by $`2\|W-V\|_\infty\|Q\|_1`$. Taking the stabilized n
 
 ### 5.2 Leakage under a common encoder error and channel error
 
-Put $`\mathcal E=\operatorname{Ad}_V`$ and let $`\mathcal T_J=\operatorname{Tr}_{J^c}`$. The following exact decomposition is useful:
+Put $`\mathcal E=\mathrm{Ad}_V`$ and let $`\mathcal T_J=\mathrm{Tr}_{J^c}`$. The following exact decomposition is useful:
+
+**Equation (23).**
 
 ```math
 \begin{aligned}
@@ -320,7 +341,6 @@ Put $`\mathcal E=\operatorname{Ad}_V`$ and let $`\mathcal T_J=\operatorname{Tr}_
 &+\mathcal T_J\widetilde{\mathcal E}
 (\widetilde{\mathcal N}-\mathcal N_d).
 \end{aligned}
-\tag{23}
 ```
 
 Channels have diamond norm one, and the diamond norm is submultiplicative. Equation (17) gives
@@ -329,7 +349,7 @@ $`(1/2)(2\kappa)(4/3)=4\kappa/3`$, and that of the third term is at most $`\eta`
 
 The simpler bound $`\varepsilon_m+\eta+2\kappa`$ is also valid. The $`4/3`$ coefficient uses this particular channel's distance from identity. The improved coefficient assumes the same actual encoder under both hypotheses; it does not describe two unrelated implementations chosen according to the hidden hypothesis.
 
-The proof permits any CPTP $`\widetilde{\mathcal E}`$ and is consequently useful for assessing implementation noise. For the mathematical statement within the pure-ancilla masking model, take $`\widetilde{\mathcal E}=\operatorname{Ad}_W`$ with W an isometry. General CPTP encoder imperfections may introduce an uncontrolled environment; they are covered as errors, not redefined as admissible exact maskers.
+The proof permits any CPTP $`\widetilde{\mathcal E}`$ and is consequently useful for assessing implementation noise. For the mathematical statement within the pure-ancilla masking model, take $`\widetilde{\mathcal E}=\mathrm{Ad}_W`$ with W an isometry. General CPTP encoder imperfections may introduce an uncontrolled environment; they are covered as errors, not redefined as admissible exact maskers.
 
 ### 5.3 Distance from the Schur class
 
@@ -348,31 +368,34 @@ The full proof of the $`1/48`$ input, including arbitrary Schur Kraus rank and c
 
 Applying the reverse triangle inequality to (23) without a partial trace proves
 
+**Equation (24).**
+
 ```math
 D_\diamond(\widetilde{\mathcal E}\widetilde{\mathcal N},
 \widetilde{\mathcal E})
 \ge\left(\frac23-\eta-\frac43\kappa\right)_+.
-\tag{24}
 ```
 
 If the actual encoder is an isometry W, post-encoding preserves diamond distance exactly, so the stronger bound is
 
+**Equation (25).**
+
 ```math
-D_\diamond(\operatorname{Ad}_W\widetilde{\mathcal N},
-\operatorname{Ad}_W)
+D_\diamond(\mathrm{Ad}_W\widetilde{\mathcal N},
+\mathrm{Ad}_W)
 =D_\diamond(\widetilde{\mathcal N},\mathrm{id})
 \ge\left(\frac23-\eta\right)_+.
-\tag{25}
 ```
 
 An ideal decoder for V also has a useful error guarantee. Complete $`V^\dagger(\cdot)V`$ to a CPTP left inverse $`\mathcal D_V`$ by assigning a fixed state to the orthogonal complement of the code space. Contractivity gives
+
+**Equation (26).**
 
 ```math
 D_\diamond(\mathcal D_V\widetilde{\mathcal E},\mathrm{id})\le\kappa,
 \qquad
 D_\diamond(\mathcal D_V\widetilde{\mathcal E}
 \widetilde{\mathcal N},\mathcal N_d)\le\kappa+\eta.
-\tag{26}
 ```
 
 These decoder bounds do not assume knowledge of the actual coherent error. If W is implemented by a known ideal finite-gate circuit, reversing that actual circuit instead decodes W exactly in the circuit model.
@@ -382,12 +405,13 @@ These decoder bounds do not assume knowledge of the actual coherent error. If W 
 If a laboratory baseline $`\widetilde{\mathcal I}`$ obeys
 $`D_\diamond(\widetilde{\mathcal I},\mathrm{id})\le\eta_0`$, the same proof gives
 
+**Equation (27).**
+
 ```math
 \max_J D_\diamond(\mathcal T_J\widetilde{\mathcal E}
 \widetilde{\mathcal N},
 \mathcal T_J\widetilde{\mathcal E}\widetilde{\mathcal I})
 \le\varepsilon_m+\eta+\eta_0+\frac43\kappa.
-\tag{27}
 ```
 
 This is a calibration-error bound for the experiment. It does not replace the identity baseline in the exact classification or assert a new classification of arbitrary channel pairs.
@@ -396,13 +420,14 @@ This is a calibration-error bound for the experiment. It does not replace the id
 
 Choose $`\tau_m,\eta_m=O(2^{-m})`$ and compile a unitary encoder W with (20). Then
 
+**Equation (28).**
+
 ```math
-\varepsilon_{\operatorname{Ad}_W}(\widetilde{\mathcal N})
+\varepsilon_{\mathrm{Ad}_W}(\widetilde{\mathcal N})
 =O(2^{-m}),\qquad
-\operatorname{dist}_\diamond
+\mathrm{dist}_\diamond
 (\widetilde{\mathcal N},\mathfrak M_d)
 \ge\frac1{48}-O(2^{-m}).
-\tag{28}
 ```
 
 The encoder uses $`4m`$ qubits and a polynomial number of fixed-alphabet gates. Thus the instability survives finite circuit synthesis; an exact native gate of exponentially small angle is not required.
@@ -411,24 +436,24 @@ If one also wants to generate the noise channel through finite controls, suppose
 
 ```math
 \widetilde{\mathcal N}=\sum_{j=0}^2 p_j
-\operatorname{Ad}_{\widetilde U_j},
+\mathrm{Ad}_{\widetilde U_j},
 \qquad (U_0,U_1,U_2)=(I,X,Z).
 ```
 
-Let $r_j=D_\diamond(\operatorname{Ad}_{\widetilde U_j},
-\operatorname{Ad}_{U_j})$. Then
+Let $`r_j=D_\diamond(\mathrm{Ad}_{\widetilde U_j},\mathrm{Ad}_{U_j})`$. Then
+
+**Equation (29).**
 
 ```math
 \eta\le \frac12\sum_{j=0}^2|p_j-1/3|
 +\sum_{j=0}^2p_jr_j.
-\tag{29}
 ```
 
-This follows by adding and subtracting $`\sum_jp_j\operatorname{Ad}_{U_j}`$. Each $`r_j`$ is at most the phase-optimized operator error in $`\widetilde U_j`$. Z is a product of known single-qubit phases, and $`X=F_d^\dagger ZF_d`$ gives a finite polynomial-size route to approximate X with the same synthesis method. This is separate from the masker's ancilla budget: the channel's random selector is part of the supplied noise mechanism, not a secret encoder key.
+This follows by adding and subtracting $`\sum_jp_j\mathrm{Ad}_{U_j}`$. Each $`r_j`$ is at most the phase-optimized operator error in $`\widetilde U_j`$. Z is a product of known single-qubit phases, and $`X=F_d^\dagger ZF_d`$ gives a finite polynomial-size route to approximate X with the same synthesis method. This is separate from the masker's ancilla budget: the channel's random selector is part of the supplied noise mechanism, not a secret encoder key.
 
 Uniform three-way randomness can also be approximated with a fixed number r of unbiased classical bits. Map the uniformly sampled integer in $`\{0,\ldots,2^r-1\}`$ to its residue modulo three. The resulting three probabilities have total-variation distance exactly $`2/(3\,2^r)`$ from uniform. Hence $`r=O(\log(1/\eta_m))=O(m)`$ classical random bits suffice for that part of (29), without rejection or postselection.
 
-A fixed nonzero $`\eta`$ or $`\kappa`$ gives the finite leakage floor displayed in (6). Vanishing leakage requires those implementation errors to vanish; retaining the specific $`2^{-m}`$ rate requires errors of that order. At any fixed accuracy, however, separation from the Schur class remains positive whenever $`\eta\lt 1/48`$. There is no claim of a hardware fault-tolerance threshold, optimal precision cost, or noise-independent implementation accuracy.
+Fixed nonzero error budgets leave a nonvanishing term in the upper bound (6). Taking $`\eta_m,\kappa_m\to0`$ guarantees vanishing leakage through that bound; taking both to be $`O(2^{-m})`$ preserves the stated sufficient rate. These are sufficient precision budgets, not necessary conditions on the actual leakage of every implementation. At any fixed accuracy, separation from the Schur class remains positive whenever $`\eta\lt 1/48`$. There is no claim of a hardware fault-tolerance threshold, optimal precision cost, or noise-independent implementation accuracy.
 
 The Weyl operators are known operations on a growing logical Hilbert space. Their polynomial circuit descriptions do not turn this example into an independent local-qubit-noise model. The proved payoff is reference-stable local invisibility with a jointly retained signal and constant separation from exact bipartite maskability.
 

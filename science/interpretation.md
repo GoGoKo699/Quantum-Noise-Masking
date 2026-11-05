@@ -30,7 +30,7 @@ On the sequence $`d=2^{2m}`$, the encoder takes $`2m`$ input qubits and adds $`2
 
 These are logical circuits with specified pairwise gates. They do not include an architecture-specific routing or fault-tolerance estimate. The underlying noise is a known Weyl mixture on a growing register, rather than independently acting single-qubit noise.
 
-For a perturbed channel at half-diamond distance $`\eta`$ from the target and one common encoder at half-diamond distance $`\kappa`$ from the ideal encoder, the proved local upper bound increases by at most $`\eta+4\kappa/3`$. The distance from the exact class decreases by at most $`\eta`$. Fixed nonzero implementation errors create a finite upper-bound floor; vanishing leakage requires an error budget that also tends to zero.
+For a perturbed channel at half-diamond distance $`\eta`$ from the target and one common encoder at half-diamond distance $`\kappa`$ from the ideal encoder, the proved local upper bound increases by at most $`\eta+4\kappa/3`$. The distance from the exact class decreases by at most $`\eta`$. Taking both error budgets to zero therefore gives a sufficient guarantee of vanishing leakage. Fixed nonzero budgets leave nonvanishing terms in this guarantee; they do not establish a necessary lower bound on the actual leakage.
 
 ## Quantitative questions left open by the result
 

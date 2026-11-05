@@ -11,7 +11,7 @@ The baseline is the identity channel. Each local observer may hold one share and
 **Approximate structure can be different.** Let $`X_d,Z_d`$ be the cyclic shift and phase clock and define
 ```math
 \mathcal N_d=\frac13
-\left(\mathrm{id}+\operatorname{Ad}_{X_d}+\operatorname{Ad}_{Z_d}\right),
+\left(\mathrm{id}+\mathrm{Ad}_{X_d}+\mathrm{Ad}_{Z_d}\right),
 \qquad d\ge3.
 ```
 With $`L=\lfloor\sqrt d\rfloor`$, the explicit encoder
@@ -57,11 +57,17 @@ Thus almost commutation and approximate gate masking imply one another with dime
 
 Start with the model, then follow the exact classification, approximate gate criterion and single-channel separation. The [LLM reading guide](llms.txt) maps questions to these same authoritative files.
 
+## Learn the project
+
+The educational anchor is John Watrous, *The Theory of Quantum Information* (2018). The [Watrous bridge](learning/WATROUS_BRIDGE.md) selects the relevant sections, translates the notation, and works through a small masking example before explaining the steps supplied by this project and its research sources.
+
+The [30-milestone map](learning/MILESTONES.md) uses 12 background milestones to build the operational framework and 18 narrative milestones to connect the exact classification, coherent averaging mechanism, Weyl separation and implementation bounds. It defines a common route through the scientific story; specialists can enter directly through the topic pages above.
+
 ## Implementation and errors
 
 For $`d=2^{2m}`$ and $`L=2^m`$, the encoder uses $`4m`$ qubits total, including $`2m`$ clean label qubits retained as one share. A sufficient exact circuit uses $`6m`$ Hadamards, $`7m^2-m`$ controlled phases and $`2m`$ swaps, with no additional work qubits. Finite-alphabet synthesis remains polynomial in $`m`$ at the precision needed for leakage of order $`2^{-m}`$.
 
-If the channel has half-diamond error $`\eta`$ and one common encoder has half-diamond error $`\kappa`$, the local leakage increases by at most $`\eta+4\kappa/3`$, while distance from the exact class decreases by at most $`\eta`$. These are logical-circuit and error-budget statements; they do not assume a hardware noise floor can stay fixed as the target leakage vanishes.
+If the channel has half-diamond error $`\eta`$ and one common encoder has half-diamond error $`\kappa`$, the local leakage increases by at most $`\eta+4\kappa/3`$, while distance from the exact class decreases by at most $`\eta`$. These bounds provide sufficient precision budgets for retaining the separation and the vanishing-leakage guarantee.
 
 ## Reproduce the finite checks
 

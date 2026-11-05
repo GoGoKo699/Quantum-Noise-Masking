@@ -19,7 +19,7 @@ The unitary matrices almost commute as $`d`$ grows. Their conjugation channels c
 Consider the one-use noisy channel
 ```math
 \mathcal N_d=\frac13
-\left(\mathrm{id}+\operatorname{Ad}_X+\operatorname{Ad}_Z\right).
+\left(\mathrm{id}+\mathrm{Ad}_X+\mathrm{Ad}_Z\right).
 ```
 
 ## 2. A pure encoder with two small shares
@@ -32,7 +32,7 @@ V_L|\psi\rangle
 ```
 The orthogonality of the label states gives $`V_L^\dagger V_L=I`$. The dimensions are $`\dim A=L^2`$ and $`\dim B=d`$. There is no measured or discarded label.
 
-Let $`\alpha=\operatorname{Tr}_B\circ\mathcal V_L`$ and $`\beta=\operatorname{Tr}_A\circ\mathcal V_L`$. We bound the effect of $`X`$ and $`Z`$ on both marginals.
+Let $`\alpha=\mathrm{Tr}_B\circ\mathcal V_L`$ and $`\beta=\mathrm{Tr}_A\circ\mathcal V_L`$. We bound the effect of $`X`$ and $`Z`$ on both marginals.
 
 ### The system share: only the edge of the averaging window changes
 
@@ -43,13 +43,13 @@ X^aZ^b\rho Z^{-b}X^{-a}.
 ```
 Applying $`X`$ to the input shifts the $`a`$ window by one; its scalar Weyl phases cancel. The terms with $`a=1,\ldots,L-1`$ agree, leaving
 ```math
-\beta\circ\operatorname{Ad}_X-\beta
+\beta\circ\mathrm{Ad}_X-\beta
 =\frac1{L^2}\sum_{b=0}^{L-1}
-\left(\operatorname{Ad}_{X^LZ^b}-\operatorname{Ad}_{Z^b}\right).
+\left(\mathrm{Ad}_{X^LZ^b}-\mathrm{Ad}_{Z^b}\right).
 ```
 Each difference of channels has diamond norm at most two. Therefore
 ```math
-D_\diamond(\beta\circ\operatorname{Ad}_X,\beta)\le\frac1L.
+D_\diamond(\beta\circ\mathrm{Ad}_X,\beta)\le\frac1L.
 ```
 The same argument shifts the $`b`$ window for $`Z`$ and gives the identical bound. The argument is in diamond norm and includes every input-reference state.
 
@@ -67,22 +67,22 @@ V_LZ=(D_{-a}\otimes Z)V_L.
 ```
 Tracing out $`B`$ yields
 ```math
-\alpha\circ\operatorname{Ad}_X=\operatorname{Ad}_{D_b}\circ\alpha,
+\alpha\circ\mathrm{Ad}_X=\mathrm{Ad}_{D_b}\circ\alpha,
 \qquad
-\alpha\circ\operatorname{Ad}_Z=\operatorname{Ad}_{D_{-a}}\circ\alpha.
+\alpha\circ\mathrm{Ad}_Z=\mathrm{Ad}_{D_{-a}}\circ\alpha.
 ```
 
 Both diagonal unitaries have eigenvalues in an arc of angular width
 $`\theta=2\pi(L-1)/d\le\pi`$. For any density operator $`\sigma`$, the convex hull of that arc obeys
-$`|\operatorname{Tr}(\sigma D)|\ge\cos(\theta/2)`$ after centering its phase. For a purified input, the overlap of the two possible pure outputs is this trace. Their trace distance is consequently at most $`\sin(\theta/2)`$. Convexity extends the bound to mixed inputs, and an arbitrary reference is already included by the purification. Hence
+$`|\mathrm{Tr}(\sigma D)|\ge\cos(\theta/2)`$ after centering its phase. For a purified input, the overlap of the two possible pure outputs is this trace. Their trace distance is consequently at most $`\sin(\theta/2)`$. Convexity extends the bound to mixed inputs, and an arbitrary reference is already included by the purification. Hence
 ```math
-D_\diamond(\operatorname{Ad}_{D},\mathrm{id})
+D_\diamond(\mathrm{Ad}_{D},\mathrm{id})
 \le\sin(\theta/2).
 ```
 Precomposition by $`\alpha`$ does not increase diamond distance, so
 ```math
-D_\diamond(\alpha\circ\operatorname{Ad}_X,\alpha),
-\ D_\diamond(\alpha\circ\operatorname{Ad}_Z,\alpha)
+D_\diamond(\alpha\circ\mathrm{Ad}_X,\alpha),
+\ D_\diamond(\alpha\circ\mathrm{Ad}_Z,\alpha)
 \le\sin\frac{\pi(L-1)}d.
 ```
 
@@ -121,8 +121,8 @@ The three separate unitary alternatives are perfectly distinguishable with this 
 
 For a unitary pair with $`\|UV-VU\|_{\mathrm{op}}\lt2`$, a winding/Bott index can be defined through the principal logarithm of the multiplicative commutator. Up to the order convention,
 ```math
-\operatorname{Bott}(U,V)
-=\frac1{2\pi i}\operatorname{Tr}\log(VUV^\dagger U^\dagger).
+\mathrm{Bott}(U,V)
+=\frac1{2\pi i}\mathrm{Tr}\log(VUV^\dagger U^\dagger).
 ```
 The value is an integer: the commutator has determinant one and its spectrum avoids the logarithm's branch cut. The clock/shift pair has index one in this convention, while a commuting pair has index zero.
 
