@@ -11,7 +11,7 @@ The baseline is the identity channel. Each local observer may hold one share and
 **Approximate structure can be different.** Let $`X_d,Z_d`$ be the cyclic shift and phase clock and define
 ```math
 \mathcal N_d=\frac13
-\left(\mathrm{id}+\operatorname{Ad}_{X_d}+\operatorname{Ad}_{Z_d}\right),
+\left(\mathrm{id}+\mathrm{Ad}_{X_d}+\mathrm{Ad}_{Z_d}\right),
 \qquad d\ge3.
 ```
 With $`L=\lfloor\sqrt d\rfloor`$, the explicit encoder

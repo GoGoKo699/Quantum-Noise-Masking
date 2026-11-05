@@ -39,9 +39,9 @@ Let $`H`$ denote the input space and let $`\mathcal N`$ be its noise channel. An
 ```math
 \mathcal V(\rho)=V\rho V^\dagger,
 \qquad
-M_A=\operatorname{Tr}_B\circ\mathcal V,
+M_A=\mathrm{Tr}_B\circ\mathcal V,
 \qquad
-M_B=\operatorname{Tr}_A\circ\mathcal V.
+M_B=\mathrm{Tr}_A\circ\mathcal V.
 ```
 
 The partial trace describes the information available to an observer who holds only one share. It does not mean that the other share is physically destroyed. The two channels $`M_A`$ and $`M_B`$ are complementary outputs of the same pure encoder.
@@ -132,8 +132,8 @@ No measurement has selected a basis label, and both qubits are retained.
 Tracing out either qubit removes the cross terms because the two basis vectors of the discarded qubit are orthogonal. Thus
 
 ```math
-\operatorname{Tr}_B\sigma_p
-=\operatorname{Tr}_A\sigma_p
+\mathrm{Tr}_B\sigma_p
+=\mathrm{Tr}_A\sigma_p
 =a\lvert0\rangle\langle0\rvert
 +(1-a)\lvert1\rangle\langle1\rvert.
 ```
@@ -176,12 +176,12 @@ The baseline output is $`\lvert\Phi_+\rangle\langle\Phi_+\rvert`$, while the noi
 Either qubit by itself is maximally mixed under both hypotheses. But the observable $`X\otimes X`$, where $`X\lvert0\rangle=\lvert1\rangle`$ and $`X\lvert1\rangle=\lvert0\rangle`$, has expectation
 
 ```math
-\operatorname{Tr}[(X\otimes X)\sigma_p]=1-2p.
+\mathrm{Tr}[(X\otimes X)\sigma_p]=1-2p.
 ```
 
 One can measure $`X`$ on each qubit and multiply the two outcomes. The product is negative with probability $`p`$ after noise and never negative in the baseline experiment. Combining those measurement records accesses a correlation and is outside the one-share guarantee.
 
-The half-trace distance of the two joint states is $`p`$, giving optimal equal-prior success probability $`(1+p)/2`$. This input attains the channel distance $`D_\diamond(\mathcal N_p,\mathrm{id})=p`$: the reverse bound follows from $`\mathcal N_p-\mathrm{id}=p(\operatorname{Ad}_Z-\mathrm{id})`$ and the fact that two channels have half-diamond distance at most one.
+The half-trace distance of the two joint states is $`p`$, giving optimal equal-prior success probability $`(1+p)/2`$. This input attains the channel distance $`D_\diamond(\mathcal N_p,\mathrm{id})=p`$: the reverse bound follows from $`\mathcal N_p-\mathrm{id}=p(\mathrm{Ad}_Z-\mathrm{id})`$ and the fact that two channels have half-diamond distance at most one.
 
 Finally, applying the controlled-NOT again returns $`\mathcal N_p(\rho)\otimes\lvert0\rangle\langle0\rvert`$. The encoder was reversible, but this reversal alone does not undo the noise. The example exhibits complete local invisibility of a change that remains visible in two-share correlations.
 
@@ -215,7 +215,7 @@ The project uses these gates in one noise channel,
 
 ```math
 \mathcal N_d=
-\frac{\mathrm{id}+\operatorname{Ad}_{X_d}+\operatorname{Ad}_{Z_d}}3.
+\frac{\mathrm{id}+\mathrm{Ad}_{X_d}+\mathrm{Ad}_{Z_d}}3.
 ```
 
 An explicit pure encoder achieves vanishing marginal leakage using two shares of dimension at most $`d`$. Yet, for every $`d\ge3`$,

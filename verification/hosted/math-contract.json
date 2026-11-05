@@ -4,7 +4,7 @@
     {
       "path": "README.md",
       "index": 2,
-      "source_sha256": "614f2ed7453398a1e102f53951d647b6bd1462d3b07ce2aa35eadfc95c960220",
+      "source_sha256": "10af44309ca12e7d9be5ebaf45bf928d38477647a4cdef265271f5442eea1f05",
       "expected_text": "Nd=13(id+AdXd+AdZd),d≥3."
     },
     {
@@ -34,7 +34,7 @@
     {
       "path": "science/resources_and_stability.md",
       "index": 133,
-      "source_sha256": "3fb3c7a886c31e05bed06c4d9778f2d8156e2b5fa7d4213db03690faf9c597aa",
+      "source_sha256": "742fbdd436f3cecbe48de76d4afd10a4b3b3c6abe269a1fabb93d26fdf50ba95",
       "expected_text": "rj=D⋄(AdU~j,AdUj)"
     }
   ]

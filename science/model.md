@@ -12,8 +12,8 @@ V:H\longrightarrow A\otimes B,\qquad V^\dagger V=I_H.
 ```
 Write $`\mathcal V(\rho)=V\rho V^\dagger`$ and
 ```math
-M_A=\operatorname{Tr}_B\circ\mathcal V,\qquad
-M_B=\operatorname{Tr}_A\circ\mathcal V.
+M_A=\mathrm{Tr}_B\circ\mathcal V,\qquad
+M_B=\mathrm{Tr}_A\circ\mathcal V.
 ```
 
 Both outputs are retained. A pure ancillary register is allowed and counted. There is no discarded third output, mixed private randomness, secret key or postselection. The encoder may depend on the known channel or gate family.
@@ -67,9 +67,9 @@ These are Schur channels in an arbitrary basis. Equivalent descriptions are a co
 For a fixed family of unitaries $`U_1,\ldots,U_k`$ and the identity baseline, let
 ```math
 \delta=\max_{i,j}\|U_iU_j-U_jU_i\|_{\mathrm{op}},\qquad
-\varepsilon_*=\inf_V\max_j\varepsilon_V(\operatorname{Ad}_{U_j}),
+\varepsilon_*=\inf_V\max_j\varepsilon_V(\mathrm{Ad}_{U_j}),
 ```
-where $`\operatorname{Ad}_{U}(\rho)=U\rho U^\dagger`$. The [quantitative gate theorem](approximate_gates.md) proves
+where $`\mathrm{Ad}_{U}(\rho)=U\rho U^\dagger`$. The [quantitative gate theorem](approximate_gates.md) proves
 ```math
 \frac{\delta^2}{32}\le\varepsilon_*
 \le
@@ -84,7 +84,7 @@ The upper construction uses a coherent register of dimension $`L^k`$ and a secon
 The [Weyl construction and separation](weyl_separation.md) gives, for every $`d\ge3`$,
 ```math
 \mathcal N_d=\frac13
-\left(\mathrm{id}+\operatorname{Ad}_{X_d}+\operatorname{Ad}_{Z_d}\right).
+\left(\mathrm{id}+\mathrm{Ad}_{X_d}+\mathrm{Ad}_{Z_d}\right).
 ```
 With $`L=\lfloor\sqrt d\rfloor`$, a pure encoder into shares of dimensions $`L^2`$ and $`d`$ satisfies
 ```math

@@ -270,7 +270,7 @@ Explain the fixed-family-size qualification, the optimization giving a square-ro
 
 ```math
 \mathcal N_d=\frac13
-\left(\mathrm{id}+\operatorname{Ad}_{X_d}+\operatorname{Ad}_{Z_d}\right),
+\left(\mathrm{id}+\mathrm{Ad}_{X_d}+\mathrm{Ad}_{Z_d}\right),
 ```
 
 and specialize the coherent construction to labels $`(a,b)`$ and products $`X_d^aZ_d^b`$. Distinguish the channel's inaccessible random kick from the encoder's retained coherent labels.

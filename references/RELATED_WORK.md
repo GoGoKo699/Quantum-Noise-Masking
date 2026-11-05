@@ -5,9 +5,9 @@
 Let $`\mathcal N`$ be a channel on a finite-dimensional input space $`H`$. A deterministic pure encoder is an isometry $`V:H\to A\otimes B`$, with complementary marginal channels
 
 ```math
-\alpha=\operatorname{Tr}_B\circ\operatorname{Ad}_V,
+\alpha=\mathrm{Tr}_B\circ\mathrm{Ad}_V,
 \qquad
-\beta=\operatorname{Tr}_A\circ\operatorname{Ad}_V.
+\beta=\mathrm{Tr}_A\circ\mathrm{Ad}_V.
 ```
 
 We quantify how well either share can detect whether the prescribed channel acted before encoding by
