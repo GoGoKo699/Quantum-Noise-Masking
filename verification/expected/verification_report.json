@@ -1,0 +1,475 @@
+{
+  "circuit_cases": [
+    {
+      "L": 2,
+      "Weyl_branches_checked": 4,
+      "additional_work_qubits": 0,
+      "bit_order": "qubit q has binary weight 2**q",
+      "d": 4,
+      "decomposition_tolerance": 5.684341886080801e-13,
+      "enumerated_QFT_counts": {
+        "CP": 1,
+        "H": 2,
+        "SWAP": 1
+      },
+      "enumerated_gate_counts": {
+        "CP": 6,
+        "H": 6,
+        "SWAP": 2
+      },
+      "enumerated_one_phase_block_count": 2,
+      "enumerated_primitive_counts": {
+        "CX": 18,
+        "H": 6,
+        "PHASE": 18
+      },
+      "formula_gate_counts": {
+        "CP": 6,
+        "H": 6,
+        "SWAP": 2
+      },
+      "formula_primitive_counts": {
+        "CX": 18,
+        "H": 6,
+        "PHASE": 18
+      },
+      "input_qubits": 2,
+      "largest_residual": 5.012708445620225e-16,
+      "m": 1,
+      "method": "QFT and inverse are constructed gate by gate on B. Full encoder instructions are enumerated, while each fixed-label branch is evaluated on B; no 2**(4m)-dimensional encoder matrix is built.",
+      "operation_scale_for_tolerance": 14,
+      "phase_labels_checked_per_block": 2,
+      "primitive_expansion_angles_checked": 3,
+      "registers": {
+        "B": [
+          0,
+          1
+        ],
+        "a": [
+          2
+        ],
+        "b": [
+          3
+        ]
+      },
+      "residual_norm": "operator norm; diagonal phase residuals use max absolute entry",
+      "residuals": {
+        "CP_and_SWAP_primitive_decompositions": 1.181480490817672e-16,
+        "all_Xa_Zb_branches": 5.012708445620225e-16,
+        "binary_phase_A_block": 0.0,
+        "binary_phase_B_block": 0.0,
+        "gate_QFT_equals_positive_dense_Fourier": 2.939113713073924e-16,
+        "gate_inverse_QFT_equals_dense_adjoint": 2.939113713073924e-16,
+        "inverse_QFT_times_QFT": 4.689841911026366e-16
+      },
+      "tolerance": 1.5916157281026244e-12,
+      "total_encoder_qubits": 4,
+      "worst_branch_a_b": [
+        1,
+        0
+      ]
+    },
+    {
+      "L": 4,
+      "Weyl_branches_checked": 16,
+      "additional_work_qubits": 0,
+      "bit_order": "qubit q has binary weight 2**q",
+      "d": 16,
+      "decomposition_tolerance": 5.684341886080801e-13,
+      "enumerated_QFT_counts": {
+        "CP": 6,
+        "H": 4,
+        "SWAP": 2
+      },
+      "enumerated_gate_counts": {
+        "CP": 26,
+        "H": 12,
+        "SWAP": 4
+      },
+      "enumerated_one_phase_block_count": 7,
+      "enumerated_primitive_counts": {
+        "CX": 64,
+        "H": 12,
+        "PHASE": 78
+      },
+      "formula_gate_counts": {
+        "CP": 26,
+        "H": 12,
+        "SWAP": 4
+      },
+      "formula_primitive_counts": {
+        "CX": 64,
+        "H": 12,
+        "PHASE": 78
+      },
+      "input_qubits": 4,
+      "largest_residual": 1.429825622935609e-15,
+      "m": 2,
+      "method": "QFT and inverse are constructed gate by gate on B. Full encoder instructions are enumerated, while each fixed-label branch is evaluated on B; no 2**(4m)-dimensional encoder matrix is built.",
+      "operation_scale_for_tolerance": 42,
+      "phase_labels_checked_per_block": 4,
+      "primitive_expansion_angles_checked": 7,
+      "registers": {
+        "B": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "a": [
+          4,
+          5
+        ],
+        "b": [
+          6,
+          7
+        ]
+      },
+      "residual_norm": "operator norm; diagonal phase residuals use max absolute entry",
+      "residuals": {
+        "CP_and_SWAP_primitive_decompositions": 1.5700924586837752e-16,
+        "all_Xa_Zb_branches": 1.429825622935609e-15,
+        "binary_phase_A_block": 7.447602459741819e-16,
+        "binary_phase_B_block": 7.447602459741819e-16,
+        "gate_QFT_equals_positive_dense_Fourier": 6.544864004722077e-16,
+        "gate_inverse_QFT_equals_dense_adjoint": 5.54519094194479e-16,
+        "inverse_QFT_times_QFT": 9.830590177431678e-16
+      },
+      "tolerance": 1.9099388737231493e-11,
+      "total_encoder_qubits": 8,
+      "worst_branch_a_b": [
+        3,
+        3
+      ]
+    },
+    {
+      "L": 8,
+      "Weyl_branches_checked": 64,
+      "additional_work_qubits": 0,
+      "bit_order": "qubit q has binary weight 2**q",
+      "d": 64,
+      "decomposition_tolerance": 5.684341886080801e-13,
+      "enumerated_QFT_counts": {
+        "CP": 15,
+        "H": 6,
+        "SWAP": 3
+      },
+      "enumerated_gate_counts": {
+        "CP": 60,
+        "H": 18,
+        "SWAP": 6
+      },
+      "enumerated_one_phase_block_count": 15,
+      "enumerated_primitive_counts": {
+        "CX": 138,
+        "H": 18,
+        "PHASE": 180
+      },
+      "formula_gate_counts": {
+        "CP": 60,
+        "H": 18,
+        "SWAP": 6
+      },
+      "formula_primitive_counts": {
+        "CX": 138,
+        "H": 18,
+        "PHASE": 180
+      },
+      "input_qubits": 6,
+      "largest_residual": 1.9261298157646465e-15,
+      "m": 3,
+      "method": "QFT and inverse are constructed gate by gate on B. Full encoder instructions are enumerated, while each fixed-label branch is evaluated on B; no 2**(4m)-dimensional encoder matrix is built.",
+      "operation_scale_for_tolerance": 84,
+      "phase_labels_checked_per_block": 8,
+      "primitive_expansion_angles_checked": 11,
+      "registers": {
+        "B": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "a": [
+          6,
+          7,
+          8
+        ],
+        "b": [
+          9,
+          10,
+          11
+        ]
+      },
+      "residual_norm": "operator norm; diagonal phase residuals use max absolute entry",
+      "residuals": {
+        "CP_and_SWAP_primitive_decompositions": 1.5700924586837752e-16,
+        "all_Xa_Zb_branches": 1.9261298157646465e-15,
+        "binary_phase_A_block": 8.125323285481903e-16,
+        "binary_phase_B_block": 8.125323285481903e-16,
+        "gate_QFT_equals_positive_dense_Fourier": 8.912721082038649e-16,
+        "gate_inverse_QFT_equals_dense_adjoint": 9.283477571197191e-16,
+        "inverse_QFT_times_QFT": 1.3616603029026222e-15
+      },
+      "tolerance": 1.5279510989785194e-10,
+      "total_encoder_qubits": 12,
+      "worst_branch_a_b": [
+        7,
+        7
+      ]
+    }
+  ],
+  "deterministic_inputs": true,
+  "format_version": 1,
+  "largest_dense_matrix_dimension": 64,
+  "largest_reported_residual": 4.263256414560601e-14,
+  "not_numerically_certified": [
+    "Analytical diamond-norm leakage and perturbation bounds",
+    "Distance from every Schur channel, including the 1/48 bound",
+    "Universal exact masking classification",
+    "Homotopy invariance underlying the winding/Bott obstruction",
+    "Optimality of leakage exponents or resource counts",
+    "A Solovay-Kitaev compiler or a hardware implementation"
+  ],
+  "random_sampling_used": false,
+  "runtime": {
+    "complex_dtype": "complex128",
+    "machine_epsilon": 2.220446049250313e-16,
+    "numpy": "2.3.5",
+    "python": "3.12.14",
+    "real_dtype": "float64"
+  },
+  "schur_basis_copy_case": {
+    "Gram_feature_dimension": 3,
+    "correlation_numerical_rank": 3,
+    "correlation_smallest_eigenvalue": -2.358677169539694e-16,
+    "d": 5,
+    "generation": "Fixed complex integer feature rows, normalized separately; C=features @ features.conj().T and K_l=diag(features[:,l]).",
+    "interpretation": "Finite numerical check of basis-copy masking for this nontrivial Gram-generated Schur channel, on a complete matrix-unit basis.",
+    "largest_residual": 2.358677169539694e-16,
+    "matrix_units_checked": 25,
+    "residual_norm": "operator norm, except diagonal/PSD scalar residuals",
+    "residuals": {
+      "Kraus_equals_Schur_on_matrix_units": 1.2412670766236366e-16,
+      "Kraus_trace_preservation": 2.2205563693195837e-16,
+      "copy_isometry_normalization": 0.0,
+      "copy_marginal_A_equals_dephasing": 0.0,
+      "copy_marginal_B_equals_dephasing": 0.0,
+      "correlation_Hermitian": 1.5316504161784045e-16,
+      "correlation_PSD_violation": 2.358677169539694e-16,
+      "correlation_diagonal_one": 2.2277828809035575e-16,
+      "masking_A_on_all_matrix_units": 2.2205563693195837e-16,
+      "masking_B_on_all_matrix_units": 2.2205563693195837e-16
+    },
+    "tolerance": 2.5579538487363607e-12
+  },
+  "solver_use": "No SDP, optimization solver, SciPy, or new dependency",
+  "status": "pass",
+  "tolerance_policy": {
+    "formula": "128 * eps_float64 * matrix_dimension * operation_scale",
+    "per_case_tolerances_and_residuals_reported": true,
+    "purpose": "Conservative double-precision verification threshold for unit-norm products, sums, and stable dense linear algebra; not a certified interval roundoff bound."
+  },
+  "verifier_sha256": "fe23b32ae60aabd9f0e081a076c211d2e072a58ee5c81904629e94f51ae333f0",
+  "weyl_cases": [
+    {
+      "L": 1,
+      "commutator_norm": 1.7320508075688776,
+      "d": 3,
+      "encoder_blocks_checked": 1,
+      "largest_residual": 1.546341191791035e-15,
+      "method": "V*V and both full intertwining norms use d-by-d block Gram sums; neither V nor label-tensor-data operators are materialized.",
+      "operation_scale_for_tolerance": 16,
+      "residual_norm": "operator norm, except explicitly scalar residuals",
+      "residuals": {
+        "VX_label_intertwining": 0.0,
+        "VZ_label_intertwining": 0.0,
+        "V_adjoint_V_equals_identity": 0.0,
+        "X_period_d": 0.0,
+        "X_unitarity": 0.0,
+        "ZX_equals_omega_XZ": 7.55608590918657e-16,
+        "Z_period_d": 1.546341191791035e-15,
+        "Z_unitarity": 1.1397225222810654e-16,
+        "commutator_norm_formula": 4.440892098500626e-16,
+        "group_commutator_equals_omega_identity": 7.447602459741819e-16,
+        "normalized_Hilbert_Schmidt_Gram_equals_identity": 1.3343220141622404e-16,
+        "winding_index_equals_one": 0.0
+      },
+      "share_A_dimension": 1,
+      "share_B_dimension": 3,
+      "tolerance": 1.3642420526593924e-12,
+      "winding": {
+        "branch_cut_gap_radians": 1.0471975511965974,
+        "convention": "sum principal eigenphases of Z X Z* X* divided by 2*pi",
+        "nearest_integer": 1,
+        "value": 1.0
+      }
+    },
+    {
+      "L": 2,
+      "commutator_norm": 1.4142135623730951,
+      "d": 4,
+      "encoder_blocks_checked": 4,
+      "largest_residual": 7.347880794884119e-16,
+      "method": "V*V and both full intertwining norms use d-by-d block Gram sums; neither V nor label-tensor-data operators are materialized.",
+      "operation_scale_for_tolerance": 24,
+      "residual_norm": "operator norm, except explicitly scalar residuals",
+      "residuals": {
+        "VX_label_intertwining": 1.7319121124709866e-16,
+        "VZ_label_intertwining": 1.7319121124709866e-16,
+        "V_adjoint_V_equals_identity": 0.0,
+        "X_period_d": 0.0,
+        "X_unitarity": 0.0,
+        "ZX_equals_omega_XZ": 2.4492935982947064e-16,
+        "Z_period_d": 7.347880794884119e-16,
+        "Z_unitarity": 0.0,
+        "commutator_norm_formula": 2.220446049250313e-16,
+        "group_commutator_equals_omega_identity": 2.4492935982947064e-16,
+        "normalized_Hilbert_Schmidt_Gram_equals_identity": 4.3297802811774664e-17,
+        "winding_index_equals_one": 0.0
+      },
+      "share_A_dimension": 4,
+      "share_B_dimension": 4,
+      "tolerance": 2.7284841053187847e-12,
+      "winding": {
+        "branch_cut_gap_radians": 1.5707963267948963,
+        "convention": "sum principal eigenphases of Z X Z* X* divided by 2*pi",
+        "nearest_integer": 1,
+        "value": 1.0
+      }
+    },
+    {
+      "L": 3,
+      "commutator_norm": 0.6840402866513378,
+      "d": 9,
+      "encoder_blocks_checked": 9,
+      "largest_residual": 4.840941598832182e-15,
+      "method": "V*V and both full intertwining norms use d-by-d block Gram sums; neither V nor label-tensor-data operators are materialized.",
+      "operation_scale_for_tolerance": 38,
+      "residual_norm": "operator norm, except explicitly scalar residuals",
+      "residuals": {
+        "VX_label_intertwining": 5.53106102128978e-16,
+        "VZ_label_intertwining": 4.053169429671442e-16,
+        "V_adjoint_V_equals_identity": 2.220446049250313e-16,
+        "X_period_d": 0.0,
+        "X_unitarity": 0.0,
+        "ZX_equals_omega_XZ": 3.864971408129405e-16,
+        "Z_period_d": 4.840941598832182e-15,
+        "Z_unitarity": 1.1102230246251565e-16,
+        "commutator_norm_formula": 3.3306690738754696e-16,
+        "group_commutator_equals_omega_identity": 4.0029660424867215e-16,
+        "normalized_Hilbert_Schmidt_Gram_equals_identity": 1.163758118520949e-16,
+        "winding_index_equals_one": 0.0
+      },
+      "share_A_dimension": 9,
+      "share_B_dimension": 9,
+      "tolerance": 9.72022462519817e-12,
+      "winding": {
+        "branch_cut_gap_radians": 2.443460952792061,
+        "convention": "sum principal eigenphases of Z X Z* X* divided by 2*pi",
+        "nearest_integer": 1,
+        "value": 1.0
+      }
+    },
+    {
+      "L": 4,
+      "commutator_norm": 0.3901806440322571,
+      "d": 16,
+      "encoder_blocks_checked": 16,
+      "largest_residual": 1.0658141036401503e-14,
+      "method": "V*V and both full intertwining norms use d-by-d block Gram sums; neither V nor label-tensor-data operators are materialized.",
+      "operation_scale_for_tolerance": 56,
+      "residual_norm": "operator norm, except explicitly scalar residuals",
+      "residuals": {
+        "VX_label_intertwining": 1.1988991679249252e-15,
+        "VZ_label_intertwining": 5.983567676939495e-16,
+        "V_adjoint_V_equals_identity": 2.220446049250313e-16,
+        "X_period_d": 0.0,
+        "X_unitarity": 0.0,
+        "ZX_equals_omega_XZ": 6.535290861122658e-16,
+        "Z_period_d": 1.0658141036401503e-14,
+        "Z_unitarity": 1.1102230246251565e-16,
+        "commutator_norm_formula": 6.106226635438361e-16,
+        "group_commutator_equals_omega_identity": 6.497413668604471e-16,
+        "normalized_Hilbert_Schmidt_Gram_equals_identity": 5.629372035261406e-17,
+        "winding_index_equals_one": 0.0
+      },
+      "share_A_dimension": 16,
+      "share_B_dimension": 16,
+      "tolerance": 2.546585164964199e-11,
+      "winding": {
+        "branch_cut_gap_radians": 2.7488935718910685,
+        "convention": "sum principal eigenphases of Z X Z* X* divided by 2*pi",
+        "nearest_integer": 1,
+        "value": 1.0
+      }
+    },
+    {
+      "L": 5,
+      "commutator_norm": 0.2506664671286089,
+      "d": 25,
+      "encoder_blocks_checked": 25,
+      "largest_residual": 1.4273168140722167e-14,
+      "method": "V*V and both full intertwining norms use d-by-d block Gram sums; neither V nor label-tensor-data operators are materialized.",
+      "operation_scale_for_tolerance": 78,
+      "residual_norm": "operator norm, except explicitly scalar residuals",
+      "residuals": {
+        "VX_label_intertwining": 1.4223727597207842e-15,
+        "VZ_label_intertwining": 6.651573170869864e-16,
+        "V_adjoint_V_equals_identity": 6.661338147750939e-16,
+        "X_period_d": 0.0,
+        "X_unitarity": 0.0,
+        "ZX_equals_omega_XZ": 6.280369834735101e-16,
+        "Z_period_d": 1.4273168140722167e-14,
+        "Z_unitarity": 1.1102230246251565e-16,
+        "commutator_norm_formula": 3.885780586188048e-16,
+        "group_commutator_equals_omega_identity": 6.497413668604471e-16,
+        "normalized_Hilbert_Schmidt_Gram_equals_identity": 8.95090418262362e-18,
+        "winding_index_equals_one": 0.0
+      },
+      "share_A_dimension": 25,
+      "share_B_dimension": 25,
+      "tolerance": 5.5422333389287814e-11,
+      "winding": {
+        "branch_cut_gap_radians": 2.8902652413026093,
+        "convention": "sum principal eigenphases of Z X Z* X* divided by 2*pi",
+        "nearest_integer": 1,
+        "value": 1.0
+      }
+    },
+    {
+      "L": 8,
+      "commutator_norm": 0.09813534865483661,
+      "d": 64,
+      "encoder_blocks_checked": 64,
+      "largest_residual": 4.263256414560601e-14,
+      "method": "V*V and both full intertwining norms use d-by-d block Gram sums; neither V nor label-tensor-data operators are materialized.",
+      "operation_scale_for_tolerance": 168,
+      "residual_norm": "operator norm, except explicitly scalar residuals",
+      "residuals": {
+        "VX_label_intertwining": 2.5727628233805493e-15,
+        "VZ_label_intertwining": 6.014708708690118e-16,
+        "V_adjoint_V_equals_identity": 2.220446049250313e-16,
+        "X_period_d": 0.0,
+        "X_unitarity": 0.0,
+        "ZX_equals_omega_XZ": 5.978733960281816e-16,
+        "Z_period_d": 4.263256414560601e-14,
+        "Z_unitarity": 2.220446049250313e-16,
+        "commutator_norm_formula": 5.828670879282072e-16,
+        "group_commutator_equals_omega_identity": 5.9787339602818175e-16,
+        "normalized_Hilbert_Schmidt_Gram_equals_identity": 4.7002383800562793e-17,
+        "winding_index_equals_one": 0.0
+      },
+      "share_A_dimension": 64,
+      "share_B_dimension": 64,
+      "tolerance": 3.055902197957039e-10,
+      "winding": {
+        "branch_cut_gap_radians": 3.0434178831651115,
+        "convention": "sum principal eigenphases of Z X Z* X* divided by 2*pi",
+        "nearest_integer": 1,
+        "value": 1.0
+      }
+    }
+  ]
+}
