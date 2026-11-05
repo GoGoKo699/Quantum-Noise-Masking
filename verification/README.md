@@ -1,6 +1,6 @@
 # Reproduce the finite checks
 
-The verifier checks explicit matrix and circuit identities supporting the written proofs. It uses Python 3.11 or later, NumPy 2.3.5, and the standard library.
+The verifier checks explicit matrix and circuit identities supporting the written proofs. It uses Python 3.11 or later, NumPy 2.3.5, and the standard library. The separate [hosted-mathematics check](hosted/README.md) compares formulas displayed by GitHub with their pinned source and supplies screenshots for visual inspection.
 
 From the repository root:
 

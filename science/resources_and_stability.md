@@ -415,8 +415,7 @@ If one also wants to generate the noise channel through finite controls, suppose
 \qquad (U_0,U_1,U_2)=(I,X,Z).
 ```
 
-Let $r_j=D_\diamond(\operatorname{Ad}_{\widetilde U_j},
-\operatorname{Ad}_{U_j})$. Then
+Let $`r_j=D_\diamond(\operatorname{Ad}_{\widetilde U_j},\operatorname{Ad}_{U_j})`$. Then
 
 ```math
 \eta\le \frac12\sum_{j=0}^2|p_j-1/3|
@@ -428,7 +427,7 @@ This follows by adding and subtracting $`\sum_jp_j\operatorname{Ad}_{U_j}`$. Eac
 
 Uniform three-way randomness can also be approximated with a fixed number r of unbiased classical bits. Map the uniformly sampled integer in $`\{0,\ldots,2^r-1\}`$ to its residue modulo three. The resulting three probabilities have total-variation distance exactly $`2/(3\,2^r)`$ from uniform. Hence $`r=O(\log(1/\eta_m))=O(m)`$ classical random bits suffice for that part of (29), without rejection or postselection.
 
-A fixed nonzero $`\eta`$ or $`\kappa`$ gives the finite leakage floor displayed in (6). Vanishing leakage requires those implementation errors to vanish; retaining the specific $`2^{-m}`$ rate requires errors of that order. At any fixed accuracy, however, separation from the Schur class remains positive whenever $`\eta\lt 1/48`$. There is no claim of a hardware fault-tolerance threshold, optimal precision cost, or noise-independent implementation accuracy.
+Fixed nonzero error budgets leave a nonvanishing term in the upper bound (6). Taking $`\eta_m,\kappa_m\to0`$ guarantees vanishing leakage through that bound; taking both to be $`O(2^{-m})`$ preserves the stated sufficient rate. These are sufficient precision budgets, not necessary conditions on the actual leakage of every implementation. At any fixed accuracy, separation from the Schur class remains positive whenever $`\eta\lt 1/48`$. There is no claim of a hardware fault-tolerance threshold, optimal precision cost, or noise-independent implementation accuracy.
 
 The Weyl operators are known operations on a growing logical Hilbert space. Their polynomial circuit descriptions do not turn this example into an independent local-qubit-noise model. The proved payoff is reference-stable local invisibility with a jointly retained signal and constant separation from exact bipartite maskability.
 

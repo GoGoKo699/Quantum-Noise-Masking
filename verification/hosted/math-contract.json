@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "expressions": [
+    {
+      "path": "README.md",
+      "index": 2,
+      "source_sha256": "614f2ed7453398a1e102f53951d647b6bd1462d3b07ce2aa35eadfc95c960220",
+      "expected_text": "Nd=13(id+AdXd+AdZd),d≥3."
+    },
+    {
+      "path": "README.md",
+      "index": 4,
+      "source_sha256": "5d95a9e1e01a197f54266f687a000971949e95234bc6365ac331ee8636d50549",
+      "expected_text": "V|ψ⟩=1L∑a,b=0L−1|a,b⟩A⊗XdaZdb|ψ⟩B"
+    },
+    {
+      "path": "README.md",
+      "index": 7,
+      "source_sha256": "8e64f88d47baf37667dde5f6e29f6e479bc0015a477beefe74ae1c7f7ad00e15",
+      "expected_text": "εV(Nd)≤23max{1L,sinπ(L−1)d}=O(d−1/2),"
+    },
+    {
+      "path": "README.md",
+      "index": 8,
+      "source_sha256": "8e5603a338b3299873fd982537926955ca253480bd54aebf32741658bd264004",
+      "expected_text": "infS∈MdD⋄(Nd,S)≥148,D⋄(Nd,id)=23."
+    },
+    {
+      "path": "README.md",
+      "index": 13,
+      "source_sha256": "1535cb73d2a2d5f2160cb972eccaa0b6e6beabc3ba003d2d37aa7d936ca10aad",
+      "expected_text": "δ232≤ε∗≤infL∈N,L≥1[1L+(k−1)(L−1)δ]."
+    },
+    {
+      "path": "science/resources_and_stability.md",
+      "index": 133,
+      "source_sha256": "3fb3c7a886c31e05bed06c4d9778f2d8156e2b5fa7d4213db03690faf9c597aa",
+      "expected_text": "rj=D⋄(AdU~j,AdUj)"
+    }
+  ]
+}

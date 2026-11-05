@@ -16,6 +16,10 @@ Read science/model.md for the identity baseline, pure bipartite isometry, refere
 - What was already known? Read references/RELATED_WORK.md and references/references.bib.
 - How are finite identities checked? Read verification/README.md and verification/verify_masking.py.
 
+## Learning route
+
+John Watrous, The Theory of Quantum Information (2018), is the sole educational anchor. Read learning/WATROUS_BRIDGE.md for verified source sections, a notation translation, a complete small example and the additional arguments needed for this project. Read learning/MILESTONES.md for the project-defined map M01 through M30, covering background/preliminaries and narrative/innovation. The map is an understanding route, not a replacement for the canonical proofs or a record of any reader's progress.
+
 ## Distinctions to retain
 
 The exact class is all Schur channels in all orthonormal bases, not only random-unitary dephasing. The approximate criterion uses matrix commutators of implementing unitaries; Weyl conjugation channels themselves commute. Common enlarged environments in a proof are not discarded physical outputs of the masker. A low local noise signature is different from masking arbitrary input states or correcting the noise.
